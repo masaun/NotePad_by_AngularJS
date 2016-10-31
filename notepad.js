@@ -60,6 +60,24 @@ angular.module('noteApp', [])
      };
 
 
+     // 詳細表示中のノートを削除
+     $scorp.deleteNote = function() {
+       $scorp.notes.splice($scorp.note.idx, 1);
+       $scorp.note = {
+         idx: ''
+         title: ''
+         body: ''
+       };
+
+       // idxを改めて採番
+       angular.forEach($scorp.notes, function(note, index) {
+         note.idx = index;
+       });
+
+     };
+
+
+
      // ノートの状態をチェックする
      $scorp.checkNote = function() {
         if ($scorp.note.idx === '') {
