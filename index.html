@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja" ng-app="noteApp">
+<head>
+  <meta charset="UTF-8">
+  <title>NotePad</title>
+
+  <link rel="stylesheet" href="notepad.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <script src="notepad.js"></script>
+</head>
+
+<body>
+
+  <div id="container" ng-controller="NoteController">
+
+    <h1>Note</h1>
+
+    <div id="list">
+      
+      <input id="searchBox" type="text" placeholder="ノートを検索">
+      
+      <ul id="noteList">
+        <li ng-repeat="note in notes" ng-click="showDetail(note.idx)" ng-class="{active: isActive(note.idx)}">
+          {{note.title}}
+        </li>
+      </ul>
+
+      <button id="addBtn" ng-click="addNote()">追加</button>
+    </div>
+
+    <article id="detail">
+
+      <h2 id="title">
+        <input type="text" ng-model="note.title" ng-change="checkNote()" placeholder="クリックして本文を入力">
+      </h2>
+
+      <p id="body">
+        <textarea ng-model="note.body" ng-change="checkNote()" placeholder="クリックして本文を入力"></textarea>
+      </p>
+    </article>
+
+    <p id="body">
+      <textarea ng-model="note.body" ng-change="checkNote()" placeholder="クリックして本文を入力"></textarea>
+    </p>
+
+    <button id="deleteBtn">削除</button>
+
+  </div>
+
+</body>

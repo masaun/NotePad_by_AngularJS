@@ -1,0 +1,120 @@
+body {
+  background-color: #FFFAEB;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 73px;
+  color: #fff;
+  width: 108px;
+  height: 37px;
+  font-size: 18px;
+  text-align: center;
+  line-height: 37px;
+}
+
+/* div#container */
+
+div#container {
+  width: 890px;
+  height: 670px;
+  margin: 20px auto 0;
+  background-image: url(images/home-bg.jpg);
+  background-repeat: no-repeat;
+  position: relative;
+  font-size: 0;
+}
+
+/* div#list */
+
+div#list {
+  width: 445px;
+  height: 670px;
+  display: inline-block;
+  overflow: hidden;
+  font-size: 16px;
+  position: relative;
+}
+
+div#searchBox {
+  position: relative;
+  top: 102px;
+  left: 129px;
+  border: none;
+  width: 234px;
+  height: 22px;
+  outline: none;
+}
+
+ul#noteList {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  position: absolute;
+  top: 147px;
+  left: 92px;
+  width: 290px;
+  height: 394px;
+  overflow-y: scroll;
+  font-size: 16px;
+}
+
+ul#noteList > li {
+  display: block;
+  border-bottom: 1px dotted #D7D7D7;
+  padding: 0 0 0 15px;
+  height: 41px;
+  line-height: 43px;
+  cursor: pointer;
+}
+
+ul#noteList > li.active {
+  background-image: url(images/home-bg.jpg);
+  background-color: #F6F6F6;
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+}
+
+button#addBtn {
+  position: absolute;
+  bottom: 83px;
+  left: 215px;
+  width: 40px;
+  height: 34px;
+  background-color: transparent;
+  border: none;
+  background-image: url(images/home-bg.jpg);
+  background-repeat: no-repeat;
+  font-size: 0px;
+  outline: none;
+}
+
+/* article#detail */
+
+article#detail {
+  width: 445px;
+  height: 670px;
+  display: inline-block;
+  overflow: hidden;
+  font-size: 16px
+  position: relative;
+}
+
+p#body {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 149px;
+  left: 40px;
+}
+
+h2#title {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 80px;
+  left: 37px;
+}
