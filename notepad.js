@@ -59,6 +59,7 @@ angular.module('noteApp', [])
        $scorp.note = $scorp.notes[index];
      };
 
+
      // ノートの状態をチェックする
      $scorp.checkNote = function() {
         if ($scorp.note.idx === '') {
@@ -66,5 +67,12 @@ angular.module('noteApp', [])
         }
      };
 
+
+     // ノートのタイトルの内容をチェック
+     $scorp.checkTitle = function() {
+        if ($scorp.note.title === '') {
+            $scorp.note.title = '新しいノート';
+        }
+     };
 
   }]);
